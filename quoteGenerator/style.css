@@ -1,0 +1,47 @@
+body {
+    background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    height: 50px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 150px;
+    margin-bottom: 0px;
+    
+}
+
+button {
+    position: fixed;
+    margin-top: 25%;
+    background-color: #A79AFF;
+    border-radius: 5px;
+}
+#quote{
+    padding: 0px 10px 5px 0px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    border-bottom-color: silver;
+    border-bottom-style: outset;
+    border-right-style:outset;
+    border-right-color: ghostwhite;
+    border-bottom-right-radius: 10px; 
+    font-family: "";
+    box-shadow: 10px 10px 8px grey;
+}
+.quoteShow{
+    display: none;
+}
+button:hover{
+    box-shadow: 5px 5px 10px whitesmoke;
+}
