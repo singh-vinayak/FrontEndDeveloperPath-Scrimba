@@ -15,8 +15,8 @@
 
 .carousel .carousel-item img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 1200px;
+    height: 400px;;
 }
 
 .carousel .carousel-actions {
