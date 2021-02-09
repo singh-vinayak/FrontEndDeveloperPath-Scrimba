@@ -6,3 +6,4 @@ Description:-<br>
 2.Search Tool- to search from users present in the list<br>
 3.Carousel- Learning how to create a carousel section<br>
 4.Dice Game- basic dice game of 2 people<br>
+5.Snake Game- Retro style based Snake using vanilla JavaScript, CSS, HTML.<br>
