@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid')
 const startButton = document.getElementById('start')
 const scoreDisplay = document.getElementById('score')
+const gameOver=document.querySelector('.gameOver')
 let squares = []
 let currentSnake = [13, 14, 15]
 let direction = 1
@@ -29,6 +30,7 @@ createGrid()
 currentSnake.forEach(index => squares[index].classList.add('snake'))
 
 function startGame() {
+    gameOver.style.display="none"
     grid.style.background=(181,181,181)
     //remove the snake
     currentSnake.forEach(index => squares[index].classList.remove('snake'))
@@ -54,8 +56,11 @@ function move() {
         (currentSnake[0] % width === 0 && direction === -1) || //if snake has hit left wall
         (currentSnake[0] - width < 0 && direction === -width) || //if snake has hit top
         squares[currentSnake[0] + direction].classList.contains('snake')
-    )
+    ){
+        gameOver.style.display="block"
+        gameOver.textContent="Oops!! You lost."
         return clearInterval(timerId)
+    }
 
     //remove last element from our currentSnake array
     const tail = currentSnake.pop()
@@ -97,7 +102,7 @@ function move() {
 function generateApple() {
     do {
         appleIndex = Math.floor(Math.random() * squares.length)
-    } while (squares[appleIndex].classList.contains('snake'))
+    } while (squares[appleIndex].classList.contains('snake') )
     squares[appleIndex].classList.add('apple')
 }
 generateApple()
