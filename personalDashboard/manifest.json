@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Personal Dashboard",
+    "version": "1.0.0",
+	"author":"Vinayak Singh",
+    "description": "Just for practicing async JS. A single page web app that displays DogeCoin Live values in USD, as well as the local time and weather conditions. Created as part of The FrontEnd Deveoper Path on Scrimba which helped me learn about the front end aspect of web development.",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}

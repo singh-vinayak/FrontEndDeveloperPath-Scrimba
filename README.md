@@ -10,3 +10,4 @@ Description:-<br>
 6.Joke Generator Web Page- Programming jokes using APIs<br>
 7.Quote Generator App- Learing how to access pre-defined quotes and printing onto the page<br>
 8.Meme Generator- My first react based Project. uses API call to generate memes based on user input text and the image fetched. <br>
+9.Personal Dashboard- A basic dashboard chrome extension that displays real-time dogecoin 
