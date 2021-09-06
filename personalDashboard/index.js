@@ -35,7 +35,7 @@ function getCurrentTime() {
     const date = new Date()
     document.getElementById("time").textContent = date.toLocaleTimeString("en-us", { timeStyle: "short" })
     const hr = date.toLocaleTimeString().split(':')[0];
-    document.getElementById('greet-user').innerHTML = `${hr < 4 ? "It's Midnight" : hr < 12 ? "Good Morning" : hr < 16 ? "Good Afternoon" : hr < 20 ? "Good Evening" : "Time to sleep? Or grinding r8 now?"}`
+    document.getElementById('greet-user').innerHTML = `${hr < 4 ? "It's Midnight" : hr < 12 ? "Good Morning" : hr < 16 ? "Good Afternoon" : hr < 20 ? "Good Evening" : "Time to sleep or grinding ri8 now?"}`
 
     document.getElementById('gmt-time').innerHTML = `
             <p class="time-string">${date.toUTCString()}</p>
