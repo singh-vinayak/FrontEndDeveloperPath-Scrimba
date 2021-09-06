@@ -2,13 +2,13 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     .then(res => res.json())
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.regular})`
-		document.getElementById("author").textContent = `By: ${data.user.name}`
+        document.getElementById("author").textContent = `By: ${data.user.name}`
     })
     .catch(err => {
         // Use a default background image/author
         document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
 )`
-		document.getElementById("author").textContent = `By: Dodi Achmad`
+        document.getElementById("author").textContent = `By: Dodi Achmad`
     })
 
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
@@ -33,9 +33,14 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 
 function getCurrentTime() {
     const date = new Date()
-    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
-    const hr=date.toLocaleTimeString().split(':')[0];
-    document.getElementById('greet-user').innerHTML=`${hr<4?"It's Midnight":hr<12?"Good Morning":hr<16?"Good Afternoon":hr<20?"Good Evening":"Time to sleep? Or grinding r8 now?"}`
+    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", { timeStyle: "short" })
+    const hr = date.toLocaleTimeString().split(':')[0];
+    document.getElementById('greet-user').innerHTML = `${hr < 4 ? "It's Midnight" : hr < 12 ? "Good Morning" : hr < 16 ? "Good Afternoon" : hr < 20 ? "Good Evening" : "Time to sleep? Or grinding r8 now?"}`
+
+    document.getElementById('gmt-time').innerHTML = `
+            <p class="time-string">${date.toUTCString()}</p>
+            <img src="https://img.icons8.com/ios/64/ffffff/clock--v1.png"/>
+            `
 }
 
 setInterval(getCurrentTime, 1000)
@@ -58,3 +63,12 @@ navigator.geolocation.getCurrentPosition(position => {
         })
         .catch(err => console.error(err))
 });
+
+fetch('https://api.quotable.io/random').
+    then(response => response.json()).
+    then(data => {
+        document.getElementById('quote').innerHTML = `
+        "${data.content}"`
+    }).catch(error => {
+        document.getElementById('quote').innerHTML = "😴 Currently Sleeping. Will motivate you in a while!"
+    });

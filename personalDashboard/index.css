@@ -62,7 +62,24 @@ div#weather {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-self: flex-start;
-    margin-top: -20px;
+}
+
+div#weather > img {
+    width: 70px;
+}
+
+div#gmt-time {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+p.time-string{
+    margin: 0;
+    font-size: 1rem;
 }
 
 div#weather > img {
@@ -87,3 +104,43 @@ p#author {
     font-size: 1rem;
     color: #adadad;
 }
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+p#quote{
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.links img{
+    width: 32px;
+    height: 32px;
+}
+
+.links p{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.links img:hover,
+.links img:focus
+{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    cursor:pointer;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
