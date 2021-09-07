@@ -20,7 +20,7 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     })
     .then(data => {
         document.getElementById("crypto-top").innerHTML = `
-            <img src=${data.image.small} />
+            <img src=${data.image.small}/>
             <span>${data.name}</span>
         `
         document.getElementById("crypto").innerHTML += `
