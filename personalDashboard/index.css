@@ -141,7 +141,7 @@ p#quote {
 
 .links img:hover,
 .links img:focus {
-  animation: spin 10s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
