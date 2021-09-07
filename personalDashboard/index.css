@@ -132,11 +132,15 @@ p#quote{
     font-weight: bolder;
 }
 
-.links img:hover,
-.links img:focus
+.links:hover,
+.links:focus
 {
-    animation:spin 4s linear infinite;
     cursor:pointer;
+}
+
+.links img:hover,
+.links img:focus{
+    animation:spin 10s linear infinite;
 }
 
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
